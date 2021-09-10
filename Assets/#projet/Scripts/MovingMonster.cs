@@ -14,16 +14,15 @@ public class MovingMonster : Monster
         mySpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         Vector2 start;
         Vector2 direction;
 
         // déplacement
-        Vector2 deplacement = speed * Time.deltaTime;
-        transform.position += (Vector3)deplacement;   // casting on transforme le vecteur 2 déplacement en vecteur 3
-                                                        // le transform reste un vecteur 3 mm en 2D
+        
         if(speed.x < 0)
         {
             mySpriteRenderer.flipX = true;
@@ -45,5 +44,9 @@ public class MovingMonster : Monster
         {
             speed.x *= -1;
         }
+
+        Vector2 deplacement = speed * Time.deltaTime;
+        transform.position += (Vector3)deplacement;   // casting on transforme le vecteur 2 déplacement en vecteur 3
+                                                      // le transform reste un vecteur 3 mm en 2D
     }
 }

@@ -8,10 +8,14 @@ public class MovingMonster : Monster
     private SpriteRenderer mySpriteRenderer;
 
     public float hitRange = 0.1f;
+
+    private Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
         mySpriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();  // renvoie null si pas d'animator 
     }
 
 
@@ -25,13 +29,29 @@ public class MovingMonster : Monster
         
         if(speed.x < 0)
         {
-            mySpriteRenderer.flipX = true;
+            if(animator != null)
+            {
+                animator.SetBool("right", false);   // uniquement pour animator dc monstre bleu
+            }
+            else
+            {
+                mySpriteRenderer.flipX = true;
+            }
+            
             start = (Vector2)transform.position + Vector2.left * 0.6f;
             direction = Vector2.left;
         }
         else
         {
-            mySpriteRenderer.flipX = false;
+            if(animator != null)
+            {
+                animator.SetBool("right", true);
+            }
+            else
+            {
+                mySpriteRenderer.flipX = false;
+            }
+            
             start = (Vector2)transform.position + Vector2.right * 0.6f;
             direction = Vector2.right;
         }

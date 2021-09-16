@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelsManager : MonoBehaviour
 {
@@ -33,9 +34,18 @@ public class LevelsManager : MonoBehaviour
 
     public static void LoseLife()                 // methode statique pas besoin d'appeler une instance -> on ne peut que mettre des variables statiques dedans
     {
+        if (lifes> 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // on recoit l(index de la scene en cours
+            Debug.Log(lifes);
+            lifes--;
+        }
+        else
+        {
+            SceneManager.LoadScene("GameOver");
+        }
+       
 
-        lifes--;
-        Debug.Log(lifes);
     }
 
     // Update is called once per frame

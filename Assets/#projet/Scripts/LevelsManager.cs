@@ -5,8 +5,12 @@ using UnityEngine;
 public class LevelsManager : MonoBehaviour
 {
     public static LevelsManager instance = null;
+
     public GameObject playerPrefab;
     public GameObject player;
+
+    public static int lifes = 3;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +29,13 @@ public class LevelsManager : MonoBehaviour
 
 
         
+    }
+
+    public static void LoseLife()                 // methode statique pas besoin d'appeler une instance -> on ne peut que mettre des variables statiques dedans
+    {
+
+        lifes--;
+        Debug.Log(lifes);
     }
 
     // Update is called once per frame

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LevelsManager : MonoBehaviour
 {
-    static LevelsManager instance = null;
+    public static LevelsManager instance = null;
     public GameObject playerPrefab;
     public GameObject player;
     // Start is called before the first frame update

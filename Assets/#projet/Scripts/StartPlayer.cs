@@ -7,7 +7,7 @@ public class StartPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        LevelsManager levelsManager = GameObject.FindObjectOfType<LevelsManager>();
+        LevelsManager levelsManager = LevelsManager.instance;
         GameObject player = levelsManager.player;
         player.transform.position = transform.position; // levels manager est unique dc il aura forcément le bon
     }

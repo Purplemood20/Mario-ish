@@ -301,6 +301,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4203546985820446857, guid: 05bf10fad42ede6449dfc0503dffc63b, type: 3}
+      propertyPath: destination
+      value: Scene3
+      objectReference: {fileID: 0}
     - target: {fileID: 4203546985820446859, guid: 05bf10fad42ede6449dfc0503dffc63b, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -351,6 +355,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05bf10fad42ede6449dfc0503dffc63b, type: 3}
+--- !u!114 &602002033 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4203546985820446857, guid: 05bf10fad42ede6449dfc0503dffc63b, type: 3}
+  m_PrefabInstance: {fileID: 602002032}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be51eee6788505b4f847bb2860923464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &692254387
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,7 +738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d5853334d3293f40b85dcdf2a5641d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 3}
 --- !u!4 &1356136097 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3614454322802029301, guid: 7660deada4b65c64d83ce408d6940135, type: 3}
@@ -1042,6 +1057,14 @@ PrefabInstance:
     - target: {fileID: 4507169744190703432, guid: 067ae38bb42ec494ab35c1b3054fc292, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4507169744190703434, guid: 067ae38bb42ec494ab35c1b3054fc292, type: 3}
+      propertyPath: whenPickUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 602002033}
+    - target: {fileID: 4507169744190703434, guid: 067ae38bb42ec494ab35c1b3054fc292, type: 3}
+      propertyPath: whenPickUp.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Unlock
       objectReference: {fileID: 0}
     - target: {fileID: 4507169744190703438, guid: 067ae38bb42ec494ab35c1b3054fc292, type: 3}
       propertyPath: m_Name

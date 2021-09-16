@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Elevator : MonoBehaviour
 {
+    
     // Start is called before the first frame update
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -18,6 +19,7 @@ public class Elevator : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             collision.transform.parent = null;
+            DontDestroyOnLoad(LevelsManager.instance.player);
         }
 
     }
